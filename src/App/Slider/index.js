@@ -47,9 +47,9 @@ export default class Slider extends Component {
   };
   autoplay = () => {
     if (this.state.autoplay) {
-      var interval = setInterval(this.goToNextSlide, 2500);
+      this.goToNextSlide();
     } else {
-      clearInterval(interval);
+      clearInterval(this.interval);
     }
   };
   toggleAutoplay = () => {
@@ -96,8 +96,11 @@ export default class Slider extends Component {
     }
     this.setIndex(i);
   };
-  componentWillMount() {
-    this.autoplay();
+  componentDidMount() {
+    this.interval = setInterval(this.autoplay, 5500);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
   render() {
     const { images } = this.props;
