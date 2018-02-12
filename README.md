@@ -2,6 +2,10 @@
 
 Hi! This is an image slider built in [React](https://reactjs.org/) on a [Create-React-App](https://github.com/facebook/create-react-app) project, styled with [styled-components](https://www.styled-components.com/), and based off of Daniel Zuzevich's work [1](https://medium.com/@ItsMeDannyZ/build-an-image-slider-with-react-es6-264368de68e4) [2](https://github.com/DZuz14/React-Image-Viewer), except I took out [Redux](https://redux.js.org/) because I couldn't figure that part out, and also while [Daniel's Heroku site](https://react-slider.herokuapp.com/) has autoplay, his repo kinda doesn't, so I put that in.
 
+## v0.1.2 !!!
+
+2018-02-11 Fixed handleDotClick() and <Dot> so that it responds to clicking and highlights appropriately! It kinda looks like how it's supposed to now, except that the {all the rest of it} :)
+
 ## v0.1.1 !!!
 
 2018-02-10 I fixed autoplay(), componentDidMount(), and componentWillUnmount() so that if the component is part of a route, say, and you navigate away, it doesn't throw errors because the interval is still running :) THANKS @VCARL! Also my sister is in labor omg.

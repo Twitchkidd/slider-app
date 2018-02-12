@@ -12,6 +12,7 @@ const StyledDot = styled.div`
 
 const Dot = ({ id, active, dotClick }) => (
   <StyledDot
+    active={active}
     data-id={id}
     onClick={e => dotClick(parseInt(e.target.getAttribute("data-id"), 10))}
   />
